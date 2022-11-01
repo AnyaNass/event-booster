@@ -1,0 +1,32 @@
+.footer {
+	padding: 40px 0px;
+}
+
+.footer {
+	&__text {
+		font-size: $primary-font-size;
+		text-align: center;
+		color: $secondary-text-color;
+
+		@include bp(mob-only) {
+			display: flex;
+			align-content: center;
+			flex-direction: column;
+			font-size: $mob-primary-font-size;
+		}
+	}
+
+	&__link {
+		cursor: pointer;
+	}
+
+	&__link:hover,
+	&__link:focus {
+		color: $accent-color;
+	}
+
+	&__heart {
+		color: $accent-color;
+	}
+
+}

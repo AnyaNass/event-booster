@@ -1,0 +1,76 @@
+.zero-matches {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+
+.zero-matches {
+	&__text {
+		text-align: center;
+		color: $accent-color;
+		font-weight: 700;
+		opacity: 0;
+		transform: scale(1.1);
+
+		animation-name: increase;
+		animation-duration: 3000ms;
+		animation-iteration-count: 1;
+		animation-fill-mode: forwards;
+		animation-delay: 1000ms;
+
+		@include bp(mob) {
+			font-size: 16px;
+		}
+
+		@include bp(tab) {
+			font-size: 24px;
+		}
+
+		@include bp(desk) {
+			font-size: 32px;
+		}
+	}
+
+	&__img {
+		width: 200px;
+		height: auto;
+		opacity: 0;
+		transform: scale(-2) rotate(45deg);
+
+		animation-name: mask-increase;
+		animation-duration: 2000ms;
+		animation-iteration-count: 1;
+		animation-fill-mode: forwards;
+
+		@keyframes mask-increase {
+			0% {
+				opacity: 0.3;
+				transform: scale(-1) rotate(90deg);
+			}
+
+			50% {
+				opacity: 0.7;
+				transform: scale(0) rotate(135deg);
+			}
+
+			100% {
+				opacity: 1;
+				transform: scale(1) rotate(360deg);
+			}
+
+		}
+
+		@include bp(mob) {
+			width: 200px;
+		}
+
+		@include bp(tab) {
+			width: 300px;
+		}
+
+		@include bp(desk) {
+			width: 400px;
+		}
+	}
+}

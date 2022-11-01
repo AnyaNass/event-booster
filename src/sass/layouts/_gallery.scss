@@ -1,0 +1,196 @@
+// body {
+// 	background-color: $primary-bg-color;
+
+// 	@include bp(tab) {
+// 		background-image: url('../images/bg-tablet.svg');
+// 		background-position: 0 446px;
+// 		background-repeat: repeat-y;
+// 		background-size: cover;
+// 	}
+
+// 	@include bp(desk) {
+// 		background-image: url('../images/bg-body.svg');
+// 		background-position: 0 446px;
+// 		background-repeat: repeat-y;
+// 		background-size: cover;
+// 	}
+// }
+
+.gallery__list {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	gap: 20px;
+
+	@include bp(tab) {
+		gap: 32px;
+	}
+}
+
+.gallery__item {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	text-align: center;
+	width: 130px;
+
+	opacity: 0;
+	transform: scale(1.1);
+	animation-name: increase;
+	animation-duration: 3000ms;
+	animation-iteration-count: 1;
+	animation-fill-mode: forwards;
+
+	@include bp(tab) {
+		width: 152px;
+	}
+
+	@include bp(desk) {
+		width: 288px;
+	}
+
+	&:after {
+		content: '';
+		position: absolute;
+		top: -10px;
+		right: 0;
+		width: 102px;
+		height: 95px;
+		border: 1px solid rgba(220, 86, 197, 0.3);
+		border-radius: 50px 0px;
+		pointer-events: none;
+
+		@include bp(tab) {
+			width: 120px;
+			height: 112px;
+		}
+
+		@include bp(desk) {
+			width: 227px;
+			height: 212px;
+			top: -19px;
+		}
+	}
+}
+
+.gallery__item.kobzon {
+	pointer-events: none;
+}
+
+.gallery__link {
+	transition: transform 250ms linear;
+
+	&:hover {
+		transform: perspective(400px) rotateY(-20deg);
+	}
+}
+
+.gallery__img {
+	width: 120px;
+	height: 151px;
+	border-radius: 50px 0;
+
+	@include bp(tab) {
+		width: 141px;
+		height: 178px;
+	}
+
+	@include bp(desk) {
+		width: 267px;
+		height: 337px;
+	}
+}
+
+.event-heading {
+	padding-top: 8px;
+	padding-bottom: 8px;
+
+	color: $accent-color;
+	font-size: $mob-primary-font-size;
+	line-height: calc(17.07 / 14);
+	font-weight: $bold-font-weight;
+
+	@include bp(tab) {
+		font-size: $primary-font-size;
+		line-height: calc(19.5 / 16);
+	}
+}
+
+.event-data {
+	padding-bottom: 8px;
+
+	color: $primary-text-color;
+	font-size: $mob-primary-font-size;
+	line-height: 1.21;
+	font-weight: 400;
+
+	@include bp(tab) {
+		font-size: $primary-font-size;
+		line-height: calc(19.5 / 16);
+	}
+}
+
+.event-place {
+	color: $primary-text-color;
+	font-size: $mob-primary-font-size;
+	line-height: calc(14.63 / 12);
+	font-weight: $semibold-font-weight;
+
+	@include bp(tab) {
+		font-size: $primary-font-size;
+		line-height: calc(17.7 / 14);
+	}
+}
+
+.map__icon {
+	margin-right: 5px;
+
+	pointer-events: none;
+}
+
+@keyframes increase {
+	0% {
+		opacity: 0;
+	}
+
+	10% {
+		opacity: 0.1;
+	}
+
+	20% {
+		opacity: 0.2;
+	}
+
+	30% {
+		opacity: 0.3;
+	}
+
+	40% {
+		opacity: 0.4;
+	}
+
+	50% {
+		opacity: 0.5;
+	}
+
+	60% {
+		opacity: 0.6;
+	}
+
+	70% {
+		opacity: 0.7;
+	}
+
+	80% {
+		opacity: 0.8;
+	}
+
+	90% {
+		opacity: 0.9;
+	}
+
+	100% {
+		opacity: 1;
+		transform: scale(1);
+	}
+}

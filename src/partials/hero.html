@@ -1,0 +1,39 @@
+<section class="hero">
+  <div class="container hero__container">
+    <h1 class="hero__title">FIND BEST EVENTS AROUND THE WORLD</h1>
+
+    <div class="search">
+      <div class="search__form">
+        <input
+          autocomplete="off"
+          class="search__element keyword"
+          name="start-searching"
+          id="search-form"
+          type="text"
+          placeholder="Start searching"
+        />
+        <svg class="search__svg" width="12" height="12">
+          <use href="./images/sprite.svg#Lupa"></use>
+        </svg>
+      </div>
+      <div class="select__form">
+        <input
+          autocomplete="off"
+          class="search__element select-country"
+          type="text"
+          name="searchQuery"
+          placeholder="Choose country"
+          data-country_id="US"
+        />
+        <svg class="select__svg" width="15" height="10">
+          <use href="./images/sprite.svg#Strilka"></use>
+        </svg>
+        <div class="overlay">
+          <div class="country_list-thumb is-hidden">
+            <ul class="country_list list"></ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

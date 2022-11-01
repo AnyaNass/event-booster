@@ -1,0 +1,51 @@
+.header {
+    .background-logo {
+      width: 210px;
+      height: 180px;
+      background: linear-gradient(rgba(196, 196, 196, 0.03), rgba(196, 196, 196, 0));
+      backdrop-filter: blur(15px);
+      border-radius: 50%;
+      position: fixed;
+      left: -105px;
+      top: -90px;
+    }
+    .header__logo-svg {
+      position: fixed;
+      width: 60px;
+      height: 30px;
+      top: 20px;
+      left: 20px;
+      z-index: 5;
+      &:hover {
+        cursor: pointer;
+      }
+    }
+    @media screen and (min-width: 768px) {
+      .background-logo {
+        width: 360px;
+        height: 300px;
+        left: -180px;
+        top: -150px;
+      }
+      .header__logo-svg {
+        width: 100px;
+        height: 50px;
+        left: 40px;
+        top: 40px;
+      }
+    }
+    @media screen and (min-width: 1260px) {
+      .background-logo {
+        width: 480px;
+        height: 400px;
+        left: -240px;
+        top: -200px;
+      }
+      .header__logo-svg {
+        width: 140px;
+        height: 70px;
+        left: 40px;
+        top: 40px;
+      }
+    }
+  }

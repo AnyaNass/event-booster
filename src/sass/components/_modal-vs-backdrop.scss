@@ -1,0 +1,23 @@
+.modal {
+	width: 280px;
+	position: absolute;
+	left: 50%;
+
+	border-radius: 150px 0;
+
+	background-color: $secondary-bg-color;
+
+	&.modal.modal-animation {
+		transform: translateX(-50%);
+	}
+
+	@include bp(tab) {
+		width: 704px;
+		border-radius: 300px 0;
+	}
+
+	@include bp(desk) {
+		height: 1010px;
+		width: 1034px;
+	}
+}

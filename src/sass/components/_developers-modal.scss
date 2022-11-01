@@ -1,0 +1,109 @@
+.developers {
+	width: 280px;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+
+	padding: 80px 20px;
+	background-color: $secondary-bg-color;
+	border-radius: 150px 0px;
+	box-shadow: 5px 5px 10px $accent-color;
+
+	&.modal-animation {
+		transform: translate(-50%, -50%) scale(1);
+	}
+
+	@include bp(tab) {
+		width: 704px;
+		padding: 50px 30px;
+	}
+
+	@include bp(desk) {
+		width: 1034px;
+		padding: 50px;
+	}
+}
+
+.developers__list {
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	gap: 10px;
+
+	@include bp(tab) {
+		flex-direction: row;
+		flex-wrap: wrap;
+		gap: 20px;
+		justify-content: space-around;
+	}
+}
+
+.developers__item {
+	display: flex;
+	align-items: center;
+	gap: 15px;
+
+	@include bp(tab) {
+		width: 45%;
+	}
+}
+
+.developers__img {
+	height: 80px;
+	width: 80px;
+	border-radius: 50%;
+	transition: transform 250ms linear;
+
+	&:hover,
+	&:focus {
+		transform: scale(1.1);
+	}
+
+	@include bp(tab) {
+		height: 120px;
+		width: 120px;
+	}
+
+	@include bp(desk) {
+		height: 140px;
+		width: 140px;
+	}
+}
+
+.developers__description {
+	max-width: 60%;
+}
+
+.developers__name {
+	font-weight: $semibold-font-weight;
+	font-size: 18px;
+	color: $accent-color;
+
+	@include bp(tab) {
+		font-size: $title-modal-font-size;
+	}
+}
+
+.developers__role {
+	font-size: $mob-primary-modal-font-size;
+	color: $dark-modal-text-color;
+	margin: 5px 0 0;
+
+	@include bp(tab) {
+		font-size: $primary-modal-font-size;
+	}
+}
+
+.developers__link {
+	display: inline-block;
+	margin: 5px 0 0;
+	font-size: 14px;
+	color: $btn-color;
+	text-decoration: underline;
+	transition: transform 250ms linear;
+
+	&:hover,
+	&:focus {
+		transform: scale(1.2);
+	}
+}

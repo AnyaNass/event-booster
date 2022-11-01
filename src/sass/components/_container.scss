@@ -1,0 +1,16 @@
+.container {
+	max-width: 320px;
+	width: 100%;
+	margin: 0 auto;
+	padding: 0 20px;
+
+	@include bp(tab) {
+		max-width: 768px;
+		padding: 0 32px;
+	}
+
+	@include bp(desk) {
+		max-width: 1280px;
+		padding: 0 16px;
+	}
+}

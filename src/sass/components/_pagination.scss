@@ -1,0 +1,50 @@
+.pagination {
+  display: flex;
+  justify-content: center;
+  gap: 5px;
+  margin: 60px 0 0;
+}
+
+.pagination-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+
+  line-height: calc(17.07 / 14);
+  color: $primary-text-color;
+  font-size: $mob-primary-font-size;
+
+  @include bp(tab) {
+    font-size: $primary-font-size;
+    line-height: calc(19.5 / 16);
+  }
+
+  &--points {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    cursor: pointer;
+
+    line-height: calc(17.07 / 14);
+    color: $accent-color;
+    font-size: $mob-primary-font-size;
+
+    @include bp(tab) {
+      line-height: calc(21.94 / 18);
+    }
+  }
+}
+
+.pagination-item.points {
+}
+
+.pagination-item.current {
+  color: $accent-color;
+  border: 1px solid $accent-color;
+  border-radius: 10px 0px;
+}
